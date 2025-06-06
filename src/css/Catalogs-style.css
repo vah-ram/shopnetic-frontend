@@ -1,0 +1,592 @@
+
+.Catalog-Section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.Catalog-Section .exit-arrow {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 20px;
+    top: 20px;
+    z-index: 100;
+}
+
+.Catalog-Section .exit-arrow img {
+    width: 25px;
+    height: 25px;
+}
+
+.mobileCatalogPart {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.mobileCatalogPart .pricePartDiv {
+    width: 95%;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgb(210, 210, 210);
+    padding: 18px;
+    margin: 20px auto 10px auto;
+}
+
+.mobileCatalogPart .pricePartDiv span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.pricePartDiv span span:nth-child(1) {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 57, 57);
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.pricePartDiv span span:nth-child(2) {
+    height: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: .4px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.pricePartDiv span span:nth-child(2) img {
+    width: 18px;
+    height: 18px;
+}
+
+.pricePartDiv span img {
+    width: 20px;
+    height: 20px;
+}
+
+.mobileCatalogPart .mobileReviewAndQuestion {
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+}
+
+.mobileReviewAndQuestion span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgb(210, 210, 210);
+    margin: 5px;
+    padding: 5px 10px 10px 5px;
+    border-radius: 10px;
+}
+
+.mobileReviewAndQuestion span:nth-child(1) {
+    width: 60%;
+    height: 100%;
+}
+
+.mobileReviewAndQuestion span:nth-child(2) {
+    width: 40%;
+}
+
+.mobileReviewAndQuestion span button {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.mobileReviewAndQuestion span button img {
+    width: 15px;
+    height: 15px;
+}
+
+.mobileReviewAndQuestion span main {
+    display: block;
+    padding-left: 5px;
+}
+
+.mobileReviewAndQuestion span main p {
+    font-size: 15px;
+    letter-spacing: .1px;
+}
+
+.mobileReviewAndQuestion span main div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobileReviewAndQuestion span main div img {
+    width: 16px;
+    height: 16px;
+}
+
+.mobileCatalogPart .mobileTopMenu {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobileTopMenu button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.mobileTopMenu button img {
+    width: 28px;
+    height: 28px;
+}
+
+.mobileProductNameDiv {
+    width: 100%;
+    color: black;
+    padding: 10px 10px 10px 27px;
+    text-align: left;
+    margin: 20px auto;
+    letter-spacing: .5px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.similiarCatalogsFooter {
+    width: 100%;
+    height: auto;
+    column-count: 2;
+    column-gap: 20px;
+    padding: 10px;
+}
+
+.imagePart {
+    position: relative;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.imagePart .leftImagesPart {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    left: 20px;
+    top: 100px;
+}
+
+.imagePart .leftImagesPart .imageSpan {
+    width: 65px;
+    height: 85px;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.imageSpan:hover {
+    border: 2px solid rgb(184, 184, 184);
+}
+
+.imagePart .leftImagesPart .imageSpan img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bigPictureDiv {
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 150px;
+}
+
+.bigPictureDiv .imgSpan {
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bigPictureDiv .imgSpan img {
+    object-fit: cover;
+}
+
+.secondInfoPart {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    background: transparent;
+}
+
+.secondInfoPart .infoFirstPart {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: transparent;
+}
+
+.infoFirstPart .betweenInfoPart {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.betweenInfoPart .titleProduct {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 27px;
+    margin-top: 20px;
+}
+
+.betweenInfoPart .reviewsSpan {
+    font-weight: bold;
+    color: rgb(36, 36, 36);
+    margin: 20px 0 0 10px;
+}
+
+.betweenInfoPart .questionSpan {
+    font-weight: bold;
+    color: rgb(36, 36, 36);
+    margin: 0 0 0 10px;
+}
+
+.betweenInfoPart .smallImagesDiv {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    column-count: 2;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.smallImagesDiv span {
+    width: 90px;
+    height: 110px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.smallImagesDiv span img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .2s ease;
+}
+
+.smallImagesDiv span:hover img {
+    transform-origin: center;
+    transform: scale(1.1);
+}
+
+.secondInfoPart .infoSecondPart {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.infoSecondPart .infoTopMenuDiv {
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.infoTopMenuDiv .articleSpan {
+    font-size: 14px;
+    letter-spacing: .2px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.betweenInfoPart .articleSpanSecond {
+    font-size: 14px;
+    letter-spacing: .2px;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.betweenInfoPart .articleSpanSecond img {
+    width: 16px;
+    height: 16px;
+}
+
+.infoTopMenuDiv .articleSpan img {
+    width: 16px;
+    height: 16px;
+}
+
+.infoTopMenuDiv .favoriteButton {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.infoTopMenuDiv .favoriteButton img {
+    width: 27px;
+    height: 27px;
+}
+
+.infoSecondPart .workswithProductDiv {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    border-radius: 15px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 150px;
+    box-shadow: 0 0 10px rgba(165, 165, 165, 0.341);
+    padding: 20px;
+}
+
+.workswithProductDiv .priceSpan {
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    margin: 5px 0 0 10px;
+}
+
+.workswithProductDiv .basketOrFavoriteSpan {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px 0 0 10px;
+    width: 90%;
+}
+
+.basketOrFavoriteSpan .basketButton {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background: rgb(255, 57, 57);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.basketOrFavoriteSpan .buyButton {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    color: rgb(255, 57, 57);
+    background: rgb(239, 224, 255);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.infoSecondPart .placeInfoDiv {
+    width: 100%;
+    height: 130px;
+    position: absolute;
+    bottom: 0;
+}
+
+.responsiveplaceInfoDiv h2 {
+    font-size: 19px;
+    font-weight: bold;
+    color: black;
+    display: none;
+}
+
+.placeInfoDiv h2 {
+    font-size: 19px;
+    font-weight: bold;
+    color: black;
+}
+
+.responsiveplaceInfoDiv span {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    display: none;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 15px;
+    padding-left: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(210, 210, 210);
+}
+
+.placeInfoDiv span {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 15px;
+    padding-left: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(210, 210, 210);
+}
+
+@media (max-width: 1300px) {
+
+    .Catalog-Section {
+        height: 120vh;
+        flex-direction: column;
+    }
+    .betweenInfoPart .titleProduct {
+        font-size: 20px;
+    }
+
+    .secondInfoPart {
+        position: relative;
+        bottom: 0;
+    }
+
+    .secondInfoPart .infoSecondPart {
+        position: absolute;
+        width: 40%;
+        right: 0;
+    }
+
+    .betweenInfoPart .smallImagesDiv {
+        display: none;
+    }
+
+    .secondInfoPart {
+        width: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: transparent;
+    }
+
+    .infoFirstPart {
+        position: relative;
+    }
+
+    .infoFirstPart .betweenInfoPart {
+        width: 100vw;
+        height: 200px;
+        position: absolute;
+        bottom: -150px;
+        padding-left: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .betweenInfoPart .titleReviewDiv {
+        position: absolute;
+        left: 10px;
+        top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bigPictureDiv {
+        max-width: 500px;
+        top: -150px;
+    }
+
+    .placeInfoDiv {
+        display: none;
+    }
+
+    .infoSecondPart .workswithProductDiv {
+        top: 200px;
+        padding: 10px;
+        box-shadow: 0 0 0;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .imagePart .leftImagesPart {
+        display: none;
+    }
+
+    .bigPictureDiv {
+        max-width: 95%;
+        left: 5%;
+    }
+
+    .secondInfoPart{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .secondInfoPart .betweenInfoPart{
+        height: 200px;
+        bottom: -150px;
+    }
+
+    .secondInfoPart .infoSecondPart {
+        height: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .Catalog-Section {
+        display: none;
+    }
+
+    .mobileCatalogPart {
+        display: flex;
+    }
+
+    .imgSliderPart {
+        width: 100%;
+        height: auto;
+    }
+
+    .imgSliderPart .slider {
+        width: 100%;
+        height: 100%;
+    }
+
+    .imgSliderPart img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

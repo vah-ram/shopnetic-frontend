@@ -1,0 +1,13 @@
+body {
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+  width: 4px;
+  background: gray;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: rgb(75, 75, 75);
+  border-radius: 2px;
+}

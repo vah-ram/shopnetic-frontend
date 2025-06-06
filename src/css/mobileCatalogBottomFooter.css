@@ -1,0 +1,36 @@
+
+
+.CatalogBottomFooter {
+    width: 100%;
+    height: 80px;
+    background: white;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10px 0 10px;
+}
+
+.CatalogBottomFooter button {
+    width: 50%;
+    height: 70%;
+    border-radius: 10px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CatalogBottomFooter button:nth-child(1) {
+    background: rgb(239, 239, 239);
+    color: rgb(255, 57, 57);
+}
+
+.CatalogBottomFooter button:nth-child(2) {
+    background: rgb(255, 57, 57);
+}

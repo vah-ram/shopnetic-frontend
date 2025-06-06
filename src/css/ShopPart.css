@@ -1,0 +1,296 @@
+
+.shopFooter {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.categoriesMain {
+    width: 80%;
+    height: 120px;
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+}
+
+.categoriesMain::-webkit-scrollbar {
+    height: 4px;
+    background: rgb(174, 174, 174);
+    border-radius: 2px;
+    display: none;
+}
+
+.categoriesMain::-webkit-scrollbar-thumb {
+    background: rgb(104, 104, 104);
+    border-radius: 2px;
+    cursor: grab;
+}
+
+.categoriesMain .categorySpan {
+    width: 300px;
+    height: 60px;
+    border-radius: 5px;
+    background: white;
+    border: 1px solid rgb(30, 30, 30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 20px 10px 0 10px;
+    cursor: pointer;
+}
+
+.categoriesMain .categoryMobileSpan {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: .5px;
+}
+
+.categoriesMain .categoryMobileSpan.car {
+    width: 120%;
+    height: 60px;
+    transform: translate(-5px);
+}
+
+.categoriesMain .categoryMobileSpan.car p {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: none;
+}
+
+.categoryMobileSpan p {
+    font-size: 12px;
+}
+
+.categoryMobileSpan img {
+    width: 25px;
+    height: 25px;
+}
+
+.categorySpan.activated {
+    background: rgb(255, 57, 57);
+    color: white;
+    border: none;
+}
+
+.categoriesMain .categorySpan {
+    width: 200px;
+    gap: 20px;
+    transition: .3s ease-in-out;
+}
+
+.categorySpan img {
+    width: 23px;
+    height: 23px;
+    transition: .3s ease-in-out;
+}
+
+.categoriesMain .categorySpan:hover {
+    background: rgb(255, 57, 57);
+    color: white;
+    border: none;
+}
+
+.categorySpan .default-img {
+    display: block;
+    transition: .3s ease-in-out;
+}
+
+.categorySpan .added-img {
+    display: none;
+    transition: .3s ease-in-out;
+}
+
+.categorySpan.activated .default-img {
+    display: none;
+}
+
+.categorySpan.activated .added-img {
+    display: block;
+}
+
+.categorySpan:hover .default-img {
+    display: none;
+}
+
+.categorySpan:hover .added-img {
+    display: block;
+}
+
+.rekTitleDiv {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.rekTitle {
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: .5px;
+    margin-left: 30px;
+}
+
+.ProductsFooter {
+    width: 100%;
+    column-count: 5;
+    column-gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    padding: 20px;
+    transform: translate(0, 20px);
+}
+
+.productSpan {
+    cursor: pointer;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #f4f4f4 100%); 
+    display: inline-block;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+}
+
+.ProductsFooter .productSpan .product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.productSpan .buyPart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.buyPart button {
+    width: 80%;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background: rgb(255, 57, 57);
+    margin: 10px auto 20px;
+    transition: .2s linear;
+}
+
+.buyPart button:hover {
+    background: black;
+}
+
+.buyPart button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+}
+
+.buyPart button p {
+    color: white;
+    font-size: 14px;
+}
+
+.buyPart .textPart {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-left: 10%;
+}
+
+.textPart h2 {
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    opacity: .9;
+    margin-top: 10px;
+    cursor: default;
+    letter-spacing: 1px;
+}
+
+.textPart p {
+    margin: 5px 0 5px 0;
+    cursor: default;
+}
+
+@media (max-width: 1470px) {
+    .categoriesMain::-webkit-scrollbar {
+        display: block;
+    }
+}
+
+@media (max-width: 992px) {
+    .ProductsFooter {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 500px) {
+    .ProductsFooter {
+        column-count: 2;
+        padding: 10px;
+        margin-top: 0;
+    }
+
+    .productSpan {
+        border-radius: 5px;
+    }
+
+    .categoriesMain {
+        width: 95%;
+        height: 90px;
+        gap: 10px;
+        overflow-x: hidden;
+    }
+
+    .categoriesMain .categorySpan {
+        width: 160px;
+        height: 45px;
+    }
+
+    .textPart h2 {
+        font-size: 13px;
+    }
+
+    .textPart p {
+        font-size: 12px;
+    }
+
+    .buyPart button {
+        height: 40px;
+        gap: 12px;
+    }
+
+    .buyPart button img {
+        width: 17px;
+        height: 17px;
+    }
+
+    .buyPart button p {
+        font-size: 12px;
+        letter-spacing: .5px;
+    }
+
+    .rekTitleDiv {
+        margin-top: 20px;
+        transform: translate(0,10px);
+    }
+
+    .rekTitle {
+        font-size: 17px;
+        margin-left: 12px;
+    }
+}
