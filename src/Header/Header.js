@@ -97,14 +97,6 @@ function Header({ currentUser, not }) {
       }
     });
   }, []);
-    
-  const handleNavigate = () => {
-    if(localStorage.getItem('current-user')) {
-      navigate('/user')
-    } else {
-      navigate('/sign-in')
-    }
-  };
 
   const toBasket = () => {
     if(!localStorage.getItem("current-user")) {
@@ -114,7 +106,6 @@ function Header({ currentUser, not }) {
       })
   } else {
       navigate('/basket');
-  }
 }
 
   return (
@@ -183,16 +174,24 @@ function Header({ currentUser, not }) {
               <p>Корзина</p>
           </button>
 
-          <button className='signBtn' onClick={handleNavigate}>
-                <img src='/shopImages/user.png'/>
-              <p>{exitOrentry}</p>
-          </button>
+          {
+            localStorage.getItem('current-user') ?
+             <button className='signBtn' onClick={() => navigate('/user')}>
+                    <img src='/shopImages/user.png'/>
+                  <p>{exitOrentry}</p>
+              </button>
+          :
+            <button className='signBtn' onClick={() => navigate('/login')}>
+                  <img src='/shopImages/user.png'/>
+                <p>{exitOrentry}</p>
+            </button>
+          }
+          
           </div>
       </header>
 
       <Toaster richColors/>
     </>
-  )
-}
+  )}}
 
-export default Header
+export default Header;

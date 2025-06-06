@@ -81,7 +81,7 @@ function Register() {
             </span>
 
             <p className='request-text'>
-              Already have an account. <a href='/sign-in'>Log in</a>
+              Already have an account. <a href='/login'>Log in</a>
             </p>
 
             <section className='secondPartSection'>

@@ -27,9 +27,9 @@ function App() {
         <Routes>
           <Route path='/' 
                  element={<Project currentUser={currentUser}/>}/>
-          <Route path='/sign-in' 
+          <Route path='/login' 
                  element={<Login />}/>
-          <Route path='/sign-up' 
+          <Route path='/register' 
                  element={<Register />}/>
           <Route path='/my-admin-panel-is-blocked' 
                  element={<AdminPanel/>} />

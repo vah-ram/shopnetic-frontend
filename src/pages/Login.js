@@ -69,7 +69,7 @@ function Login() {
             </span>
 
             <p className='request-text'>
-              Don't have an account. <a href='/sign-up'>Sign up</a>
+              Don't have an account. <a href='/register'>Sign up</a>
             </p>
 
             <span className='inputSpan'>

@@ -5,14 +5,6 @@ import '../css/BottomFooter-style.css'
 
 function BottomFooter() {
       const navigate = useNavigate();
-    
-      const handleNavigate = () => {
-        if(localStorage.getItem('current-user')) {
-          navigate('/user')
-        } else {
-          navigate('/sign-in')
-        }
-      };
 
       const toBasket = () => {
         if(!localStorage.getItem("current-user")) {
@@ -37,15 +29,18 @@ function BottomFooter() {
             <img src='/shopImages/painted-bottom-menu.png' className='added-img'/>
         </span>
 
-        <span onClick={toBasket}>
-            <img src='/shopImages/bottom-shopping-cart.png' className='default-img'/>
-            <img src='/shopImages/painted-bottom-shopping-cart.png' className='added-img'/>
-        </span>
-
-        <span onClick={handleNavigate}>
-            <img src='/shopImages/bottom-user.png' className='default-img'/>
-            <img src='/shopImages/painted-bottom-user.png' className='added-img'/>
-        </span>
+          {
+            localStorage.getItem('current-user') ?
+              <span onClick={() => navigate('/user')}>
+                  <img src='/shopImages/bottom-shopping-cart.png' className='default-img'/>
+                  <img src='/shopImages/painted-bottom-shopping-cart.png' className='added-img'/>
+              </span>
+          :
+            <span onClick={() => navigate('/login')}>
+                <img src='/shopImages/bottom-shopping-cart.png' className='default-img'/>
+                <img src='/shopImages/painted-bottom-shopping-cart.png' className='added-img'/>
+            </span>
+          }
     </footer>
           <Toaster richColors/>
     </>
