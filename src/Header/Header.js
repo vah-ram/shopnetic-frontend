@@ -102,7 +102,7 @@ function Header({ currentUser, not }) {
     if(localStorage.getItem('current-user')) {
       navigate('/user')
     } else {
-      navigate('/sign-in')
+      navigate('/login')
     }
   };
 

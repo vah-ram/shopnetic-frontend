@@ -6,13 +6,13 @@ import '../css/BottomFooter-style.css'
 function BottomFooter() {
       const navigate = useNavigate();
     
-      const handleNavigate = () => {
-        if(localStorage.getItem('current-user')) {
-          navigate('/user')
-        } else {
-          navigate('/sign-in')
-        }
-      };
+        const handleNavigate = () => {
+          if(localStorage.getItem('current-user')) {
+            navigate('/user')
+          } else {
+            navigate('/login')
+          }
+        };
 
       const toBasket = () => {
         if(!localStorage.getItem("current-user")) {
