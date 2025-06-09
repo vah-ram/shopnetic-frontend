@@ -86,8 +86,7 @@ function UserPart( {currentUser} ) {
                 </p>
               </span>
                 <Link 
-                  to={`/qrId/${currentUser?.shoppingId}`}
-                  style={currentUser?.shoppingQr}>
+                  to={`/qrId/${currentUser?.shoppingId}`}>
                     <div className="QrCodeDiv">
                       <img src="/shopImages/qr-code.png"/>
                     </div>
