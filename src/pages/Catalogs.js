@@ -98,7 +98,6 @@ function Catalogs( { currentUser }) {
       }
 
         <section className='Catalog-Section'>
-
           <button onClick={() => navigate('/')} className="exit-arrow">
             <img src="/catalogImg/left-arrow.png"/>
           </button>

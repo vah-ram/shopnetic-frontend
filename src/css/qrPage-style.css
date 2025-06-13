@@ -1,0 +1,43 @@
+
+.qrCodeMain{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: transparent;
+}
+
+.qrCodeMain header {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.qrCodeMain header button {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+}
+
+.qrCodeMain header img {
+    width: 80%;
+    height: 80%;
+}
+
+.qrCodeMain footer img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(3);
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .qrCodeMain header button {
+    width: 30px;
+    height: 30px;
+  }
+}

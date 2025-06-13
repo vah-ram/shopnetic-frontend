@@ -1,5 +1,4 @@
 
-
 .userPartSection {
     width: 100%;
     height: auto;
@@ -80,7 +79,6 @@
 .userPartSection .accountItems div span h3 {
     width: 200px;
     color: rgb(255, 57, 57);
-    text-decoration: underline;
     position: relative;
 }
 

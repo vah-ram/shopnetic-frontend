@@ -56,11 +56,15 @@ body.in-basket {
     display: flex;
 }
 
+.product-basket-section .second-part-span .img-part {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
 .product-basket-section .second-part-span img{
-    max-width: 200px;
+    max-width: 150px;
     max-height: 160px;
     object-fit: cover;
-    border-radius: 5px;
 }
 
 .second-part-span .info-part {

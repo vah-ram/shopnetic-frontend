@@ -1,5 +1,5 @@
 
-export const link = 'https://shopnetic-backend.onrender.com';
+export const link = 'https://shopnetic-backend-1.onrender.com';
 
 export const registerRoute = `${link}/api/auth/register`
 export const loginRoute = `${link}/api/auth/login`

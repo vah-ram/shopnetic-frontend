@@ -89,7 +89,9 @@ function BasketItem({ item, currentUser }) {
             onClick={() => navigate(`/catalog/${item.article}`)}>
 
             <span className='second-part-span'>
-                <img src={item.images[0]} className='product-image'/>
+                <span className='img-part'>
+                    <img src={item.images[0]} className='product-image'/>
+                </span>
                             
                 <span className='info-part'>
                     <h2>{item.price.toLocaleString()} ֏</h2>
@@ -120,7 +122,9 @@ function BasketItem({ item, currentUser }) {
                     <button onClick={() => setCount(count + 1)}>+</button>
                 </span>
 
-                <button className='buyBtn' onClick={(e) => e.stopPropagation()}>
+                <button 
+                    className='buyBtn' 
+                    onClick={(e) => { e.stopPropagation() }}>
                     Купить
                 </button>
 

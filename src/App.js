@@ -24,6 +24,7 @@ function App() {
 
   return (
       <BrowserRouter>
+      
         <Routes>
           <Route path='/' 
                  element={<Project currentUser={currentUser}/>}/>
@@ -32,7 +33,7 @@ function App() {
           <Route path='/register' 
                  element={<Register />}/>
           <Route path='/my-admin-panel-is-blocked' 
-                 element={<AdminPanel/>} />
+                 element={<AdminPanel />} />
           <Route path='/basket' 
                  element={<ShopBasket currentUser={currentUser} />} />
           <Route path='/catalog/:productId' 
@@ -41,9 +42,10 @@ function App() {
                  element={<SearchPart currentUser={currentUser}/>} />
           <Route path='/user' 
                  element={<UserPart currentUser={currentUser}/>} />
-          <Route path='/qr-code/?qrId' 
-                 element={<QrPage/>} />
+          <Route path='/qr-code' 
+                 element={<QrPage currentUser={currentUser}/>} />
         </Routes>
+
       </BrowserRouter>
   );
 }

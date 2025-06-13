@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import '../css/UserPart-style.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { toast, Toaster } from 'sonner'
 import { getBasketPricesRoute } from "./utils/UserPartRoutes.js"
 import axios from "axios"
+import BottomFooter from '../BottomFooter/BottomFooter.js'
  
-function UserPart( {currentUser} ) {
+function UserPart({ currentUser }) {
 
   const navigate = useNavigate();
   const [ allPrices, setAllPrices ] = useState(null);
@@ -16,7 +17,7 @@ function UserPart( {currentUser} ) {
     const handleExit = () => {
       if (localStorage.getItem("current-user")) {
         localStorage.removeItem("current-user");
-        navigate('/sign-in');
+        navigate('/login');
       }
     };
 
@@ -58,8 +59,13 @@ function UserPart( {currentUser} ) {
         });
   };
 
+  const qrNavigate = () => {
+    navigate(`/qr-code?qrId=${currentUser?.shoppingId}`);
+  };
+
   return (
     <>
+    <BottomFooter/>
         <section className="userPartSection">
           <div className="backBtnleft" onClick={() => {
             navigate('/')
@@ -76,21 +82,20 @@ function UserPart( {currentUser} ) {
             </div>
 
             <div>
-              <span>
-                <h2>Доставки</h2>
+              <span 
+                onClick={() => { copyId(currentUser?.shoppingId)}}>
+                  <h2>Доставки</h2>
                 <p>Получите товар по QR-коду или коду 
-                    <h3 onClick={
-                      () => { copyId(currentUser?.shoppingId)}}>
+                    <h3>
                         {currentUser?.shoppingId}
                     </h3>
                 </p>
               </span>
-                <Link 
-                  to={`/qrId/${currentUser?.shoppingId}`}>
-                    <div className="QrCodeDiv">
+                  <div 
+                    className="QrCodeDiv" 
+                    onClick={qrNavigate}>
                       <img src="/shopImages/qr-code.png"/>
-                    </div>
-                </Link>
+                  </div>
             </div>
 
             <div>
